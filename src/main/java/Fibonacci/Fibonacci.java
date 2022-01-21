@@ -41,7 +41,10 @@ public class Fibonacci {
     }
 
     public boolean isHigh(int num1, int num2, int product) {
-        return false;
+        if ((num1 * num2)>product){
+            return false;
+        }
+        return true;
     }
 
 
