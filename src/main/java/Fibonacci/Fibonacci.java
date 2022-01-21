@@ -23,6 +23,27 @@ public class Fibonacci {
         fibonacciArrayL.add(233);
     }
 
+    public boolean traverseArray(int product){
+
+
+
+        return false;
+    }
+    public int[] productFib(int product) {
+        int[] result = new int[3];
+        for (int i = 1; i < product; i++) {
+            if (isHigh(i, i--, product)) {
+
+            }
+
+        }
+        return result;
+    }
+
+    public boolean isHigh(int num1, int num2, int product) {
+        return false;
+    }
+
 
     public boolean isFibonacci(int numberToTest){
             if (fibonacciArrayL.contains(numberToTest)){

@@ -16,4 +16,9 @@ public class FibonacciTest {
         boolean result= fibonacci.isFibonacci(144);
         assertTrue(result);
     }
+    @Test
+    public void isHigh_Test_(){
+        boolean result= fibonacci.isHigh(3,4,20);
+        assertTrue(result);
+    }
 }
