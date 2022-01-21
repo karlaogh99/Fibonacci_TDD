@@ -7,10 +7,12 @@ import static org.junit.Assert.assertTrue;
 
 public class FibonacciTest {
     private Fibonacci fibonacci;
+    private int[] resultCorrect;
+
     @Before
     public void setUp(){
         fibonacci = new Fibonacci();
-
+        resultCorrect = new int[3];
     }
     @Test
     public void isFibonacci_Test_3(){
@@ -19,12 +21,11 @@ public class FibonacciTest {
     }
     @Test
     public void isHigh_Test_(){
-        boolean result= fibonacci.isHigh(3,4,20);
+        boolean result= fibonacci.isMinor(3,4,20);
         assertTrue(result);
     }
     @Test
     public void productFibTest(){
-        int[] resultCorrect = new int[3];
         resultCorrect[0]=21;
         resultCorrect[1]=34;
         resultCorrect[2]=1;
@@ -35,7 +36,6 @@ public class FibonacciTest {
     }
     @Test
     public void productFibTest_2(){
-        int[] resultCorrect = new int[3];
         resultCorrect[0]=34;
         resultCorrect[1]=55;
         resultCorrect[2]=0;

@@ -30,7 +30,7 @@ public class Fibonacci {
         int newFib = 0;
         for (int i = 1; i < product; i++) {
 
-            if (isHigh(lastFib, newFib, product)) {
+            if (isMinor(lastFib, newFib, product)) {
                 if (isFibonacci(i)){
                     lastFib = newFib;
                     newFib = i;
@@ -51,7 +51,7 @@ public class Fibonacci {
         return result;
     }
 
-    public static boolean isHigh(int num1, int num2, int product) {
+    public static boolean isMinor(int num1, int num2, int product) {
         if ((num1 * num2)>product){
             return false;
         }
