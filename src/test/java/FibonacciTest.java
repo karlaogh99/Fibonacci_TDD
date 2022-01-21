@@ -33,5 +33,16 @@ public class FibonacciTest {
         assertTrue(result[1] == resultCorrect[1] );
         assertTrue(result[2] == resultCorrect[2] );
     }
+    @Test
+    public void productFibTest_2(){
+        int[] resultCorrect = new int[3];
+        resultCorrect[0]=34;
+        resultCorrect[1]=55;
+        resultCorrect[2]=0;
+        int[] result = fibonacci.productFib(800);
+        assertTrue(result[0] == resultCorrect[0] );
+        assertTrue(result[1] == resultCorrect[1] );
+        assertTrue(result[2] == resultCorrect[2] );
+    }
 
 }
