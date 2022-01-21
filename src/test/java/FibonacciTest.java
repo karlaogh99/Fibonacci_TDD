@@ -2,6 +2,7 @@ import Fibonacci.Fibonacci;
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class FibonacciTest {
@@ -28,7 +29,9 @@ public class FibonacciTest {
         resultCorrect[1]=34;
         resultCorrect[2]=1;
         int[] result = fibonacci.productFib(714);
-        assertTrue(result == resultCorrect);
+        assertTrue(result[0] == resultCorrect[0] );
+        assertTrue(result[1] == resultCorrect[1] );
+        assertTrue(result[2] == resultCorrect[2] );
     }
 
 }
