@@ -1,10 +1,11 @@
 package Fibonacci;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Fibonacci {
-    private ArrayList<Integer> fibonacciArrayL;
+
+
+    private static ArrayList<Integer> fibonacciArrayL;
     public Fibonacci( ){
         fibonacciArrayL = new ArrayList<>();
         fibonacciArrayL.add(0);
@@ -23,24 +24,24 @@ public class Fibonacci {
         fibonacciArrayL.add(233);
     }
 
-    public boolean traverseArray(int product){
-
-
-
-        return false;
-    }
-    public int[] productFib(int product) {
+    public static int[] productFib(int product) {
         int[] result = new int[3];
         for (int i = 1; i < product; i++) {
-            if (isHigh(i, i--, product)) {
+            if (isHigh(i, i-1, product)) {
+                if (isMultiplies(i, i-1, product) && (isFibonacci(i) && isFibonacci(i--))){
+                    result[0] = i;
+                    result[1] = i--;
+                    result[2] = 1;
+                    return result;
+                }
+            }else{
 
             }
-
         }
         return result;
     }
 
-    public boolean isHigh(int num1, int num2, int product) {
+    public static boolean isHigh(int num1, int num2, int product) {
         if ((num1 * num2)>product){
             return false;
         }
@@ -48,10 +49,18 @@ public class Fibonacci {
     }
 
 
-    public boolean isFibonacci(int numberToTest){
+    public static boolean isFibonacci(int numberToTest){
             if (fibonacciArrayL.contains(numberToTest)){
                 return true;
             }
         return false;
     }
+    public static boolean isMultiplies(int num1, int num2, int product){
+        if (num1 * num2 == product){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
 }

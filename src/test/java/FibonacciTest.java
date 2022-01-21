@@ -21,4 +21,14 @@ public class FibonacciTest {
         boolean result= fibonacci.isHigh(3,4,20);
         assertTrue(result);
     }
+    @Test
+    public void productFibTest(){
+        int[] resultCorrect = new int[3];
+        resultCorrect[0]=21;
+        resultCorrect[1]=34;
+        resultCorrect[2]=1;
+        int[] result = fibonacci.productFib(714);
+        assertTrue(result == resultCorrect);
+    }
+
 }
