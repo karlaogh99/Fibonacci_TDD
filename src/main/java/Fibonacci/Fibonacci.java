@@ -42,14 +42,10 @@ public class Fibonacci {
                     return result;
                 }
             }else{
-                for (int j = newFib;j<0; j++){
-                    if (isFibonacci(j)){
-                        result[0] = newFib;
-                        result[1] = j;
-                        result[2] = 0;
-                        return result;
-                    }
-                }
+                result[0] = lastFib;
+                result[1] = newFib;
+                result[2] = 0;
+                return result;
             }
         }
         return result;
